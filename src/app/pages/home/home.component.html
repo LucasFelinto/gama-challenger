@@ -1,0 +1,15 @@
+<div class="home-container">
+    <section class="airPlane-area">
+        <img class="airplane-img" [src]="imgPath" alt="airplane">
+        <app-waves></app-waves>
+    </section>
+    <section class="login-area">
+        <h2 class="title-login">
+            HORA DE DECOLAR
+        </h2>
+        <div class="buttons-area">
+            <app-buttons>Login</app-buttons>
+            <app-buttons [nameClass]="buttonClass">Cadastro</app-buttons>
+        </div>
+    </section>
+</div>

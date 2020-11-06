@@ -1,0 +1,72 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  min-height: 500px;
+}
+.home-container .airPlane-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(45deg, #084177, #165c9e, #2586db, #bedcf7);
+  background-size: 300% 300%;
+  animation: colors 7s ease infinite;
+}
+.home-container .airPlane-area .airplane-img {
+  position: fixed;
+  width: 80%;
+  max-width: 300px;
+  animation: movingLeft 1s;
+}
+
+.home-container .login-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50%;
+  width: 100%;
+}
+
+.home-container .login-area .title-login {
+  font-size: max(27px, 2vw);
+  color: #084177;
+  font-weight: 700;
+  text-align: center;
+  animation: movingUp 1s;
+}
+
+
+@keyframes colors {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@keyframes movingLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes movingUp {
+  0% {
+   margin-top: 50px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
