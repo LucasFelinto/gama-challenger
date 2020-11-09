@@ -55,15 +55,13 @@ input {
   text-decoration: none;
 }
 
-a {
+a.forgot-password {
   color: white;
-  text-decoration: none;
   background: #C53546;
   padding: 6px;
   border-radius: 12px 0 0 12px;
 }
 
-a:hover,
-a:focus {
-  font-size: 1em;
+a {
+  text-decoration: none;
 }
