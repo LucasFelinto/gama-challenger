@@ -1,4 +1,4 @@
-<div class="home-container">
+<div class="mobile-container">
     <section class="airPlane-area">
         <img class="airplane-img" [src]="imgPath" alt="airplane">
         <app-waves></app-waves>
@@ -8,8 +8,8 @@
             HORA DE DECOLAR
         </h2>
         <div class="buttons-area">
-            <app-buttons>Login</app-buttons>
-            <app-buttons [nameClass]="buttonClass">Cadastro</app-buttons>
+            <a class="button" routerLink="/login">Login</a>
+            <a class="button signUp" routerLink="/cadastro">Cadastro</a>
         </div>
     </section>
 </div>

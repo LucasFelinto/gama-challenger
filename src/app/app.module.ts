@@ -10,6 +10,14 @@ const appRoutes: Routes = [
     path:'',
     loadChildren:() => import('./pages/home/home.module').then(mod => mod.HomeModule )
   },
+  {
+    path:'cadastro',
+    loadChildren:() => import('./pages/cadastro/cadastro.module').then(mod => mod.CadastroModule )
+  },
+  {
+    path:'login',
+    loadChildren:() => import('./pages/login/login.module').then(mod => mod.LoginModule )
+  },
   
 ]
 

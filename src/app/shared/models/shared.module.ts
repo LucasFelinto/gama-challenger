@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { ButtonsComponent } from '../components/buttons/buttons.component';
 import { WavesComponent } from '../components/waves/waves.component';
 
 
@@ -9,7 +8,6 @@ import { WavesComponent } from '../components/waves/waves.component';
 
 @NgModule({
   declarations: [
-    ButtonsComponent,
     WavesComponent
   ],
   imports: [
@@ -17,7 +15,6 @@ import { WavesComponent } from '../components/waves/waves.component';
     FormsModule,
   ],
 exports:[
-  ButtonsComponent, 
   WavesComponent
 ]
 })
