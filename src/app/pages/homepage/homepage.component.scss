@@ -1,0 +1,64 @@
+
+main {
+    nav {
+        padding: 12px;
+        background-color:#084177;
+        border-radius: 0 0 25px 25px;
+        position: relative;
+        button {
+            position: absolute;
+            top: 12px;
+            right: 32px;
+            background: transparent;
+            border: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+        }
+    }
+    background-image: url('./airplane-mobile.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+
+    form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 240px;
+        max-height: 152px;
+        background-color: white;
+        padding: 12px 12px 32px 12px;
+        border-radius: 0 4px 4px 4px;
+        span {
+            position: absolute;
+            background-color: white;
+            top: -20px;
+            left: 0;
+            border-radius: 4px 4px 0 0;
+            display: flex;
+        }
+        input[type=text], input[type=date] {
+            width: 100%;
+            margin: 2px 24px 2px 0;
+        }
+        button {
+            transform: translateX(100%);
+            background: #3544C5;
+            border-radius: 4px;
+            width: 119px;
+            height: 30px;
+            color: white;
+        }
+    }
+}
+
+
+@media (min-width: 680px) {
+    main {
+        background-image: url('./airplane.jpg');
+    }
+}
