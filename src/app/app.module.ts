@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    SignUpComponent
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
