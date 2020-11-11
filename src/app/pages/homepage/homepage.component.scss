@@ -33,6 +33,7 @@ main {
         background-color: white;
         padding: 12px 12px 32px 12px;
         border-radius: 0 4px 4px 4px;
+        box-shadow:  0 0 1em rgb(117, 117, 117), 0 0 1em rgb(68, 68, 68);
         > span {
             position: absolute;
             background-color: white;
@@ -59,7 +60,7 @@ main {
 section {
     width: 100%;
     height: 100%;
-    background: yellow;
+    box-shadow: inset 0 0 1em rgb(117, 117, 117), 0 0 1em rgb(68, 68, 68);
     > div {
         position: relative;
         top: 16px;
@@ -177,6 +178,13 @@ section {
             }
         }
     }
+}
+
+footer {
+    padding: 12px;
+    background-color:#084177;
+    text-align: center;
+    color: white;
 }
 
 @media (min-width: 680px) {
