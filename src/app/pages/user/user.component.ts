@@ -21,6 +21,7 @@ export class UserComponent   {
 
     openEdit(){
       this.edit = !this.edit
+  
     }
     closeEditModal(){
       this.edit = !this.edit
