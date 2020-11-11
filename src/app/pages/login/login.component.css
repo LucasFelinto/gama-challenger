@@ -22,12 +22,19 @@
   animation: movingFormUp 1s;
 }
 
+@media (min-width: 640px) {
+  .form-area {
+    height: 100%;
+  }
+}
+
 .form-area .title-signUp {
   font-size: max(30px, 3vw);
   color: white;
   font-weight: 700;
   text-align: center;
   animation: movingUp 1s;
+  margin-top: 16px;
 }
 
 .form-area .form {

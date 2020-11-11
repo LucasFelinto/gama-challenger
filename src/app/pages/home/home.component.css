@@ -29,6 +29,7 @@
   font-weight: 700;
   text-align: center;
   animation: movingUp 1s;
+  text-transform: uppercase;
 }
 
 .signUp {
@@ -36,6 +37,11 @@
   box-shadow: 3px 5px 0 grey;
 }
 
+.forgot-password {
+  position: absolute;
+  bottom: 25px;
+  right: 5px;
+}
 
 @keyframes colors {
   0% {
