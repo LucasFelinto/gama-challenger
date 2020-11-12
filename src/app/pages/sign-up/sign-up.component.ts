@@ -32,20 +32,14 @@ export class SignUpComponent implements OnInit {
   }
 
   handleSubmit(event) {
-    // const { nome, email, cpf, login, senha } = this.fields.value;
-    // console.log({
-    //   nome,
-    //   email,
-    //   cpf: Number.parseInt(cpf.replace(/[.]/g, "").replace("-", "")),
-    //   login,
-    //   senha
-    // });
+    event.preventDefault();
+    const { nome, email, cpf, login, senha } = this.fields.value;
     this.createUser({
-      cpf: 66221716888,
-      email: "marcos123123o@gmail.com",
-      login: "m123123@gmail.com",
-      nome: "Marcos Monteiro",
-      senha: "marcos123456"
+      nome,
+      email,
+      cpf: Number.parseInt(cpf.replace(/[.]/g, "").replace("-", "")),
+      login,
+      senha
     });
   }
 }
