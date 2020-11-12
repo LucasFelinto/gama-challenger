@@ -7,6 +7,7 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { UserModule } from './pages/user/user.module';
 import {MatMenuModule} from '@angular/material/menu';
 import { HomepageComponent } from './pages/homepage/homepage.component';
+import { SharedModule } from './shared/modules/shared.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     UserModule,
-    MatMenuModule
+    MatMenuModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
