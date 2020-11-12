@@ -1,1 +1,57 @@
-<h1>signup</h1>
+<div class="form-wrapper">
+  <form action="" [formGroup]="fields" (ngSubmit)="handleSubmit($event)">
+    <h1>Criar sua Conta</h1>
+
+    <div class="field-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Nome</mat-label>
+        <input matInput placeholder="Ana Beatriz" name="nome" formControlName="nome" required>
+        <mat-error *ngIf="fields.controls.nome.status">Nome é obrigatório</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="field-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="andre@gmail.com" name="email" formControlName="email" required>
+        <mat-error *ngIf="fields.controls.email.status">Email é obrigatório</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="field-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Login</mat-label>
+        <input matInput placeholder="andre22" name="login" formControlName="login" required>
+        <mat-error *ngIf="fields.controls.login.status">Login é obrigatório</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="field-container">
+      <mat-form-field appearance="fill">
+        <mat-label>CPF</mat-label>
+        <input matInput placeholder="000.000.000-00" [textMask]="{ mask: mask }" name="cpf" formControlName="cpf"
+          required>
+        <mat-error *ngIf="fields.controls.cpf.status">CPF é obrigatório</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="container-password">
+      <div class="field-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Senha</mat-label>
+          <input matInput placeholder="" formControlName="senha" required>
+          <mat-error *ngIf="fields.controls.senha.status">Senha é obrigatório</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="field-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Confirmação de senha</mat-label>
+          <input matInput placeholder="" name="confirmacaoSenha" formControlName="confirmacaoSenha" required>
+          <mat-error *ngIf="fields.controls.confirmacaoSenha.status">Confirmação de senha é obrigatório</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <section class="button">
+      <div class="example-button-row" class="button">
+        <button mat-raised-button color="primary" class="button">Enviar</button>
+      </div>
+    </section>
+  </form>
+</div>

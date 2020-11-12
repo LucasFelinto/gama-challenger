@@ -1,0 +1,34 @@
+body {
+  background-color: #000000;
+}
+
+.bg-blue {
+  background: blue;
+}
+
+.time {
+  position: absolute;
+
+  left: 50%;
+
+  top: 13%;
+
+  transform: translate(-50%, -50%);
+}
+
+.dotted-line {
+  border: 1px dashed #fff;
+}
+
+.img-fluid {
+  width: 114px;
+  height: auto;
+}
+
+.bg-top {
+  background: #165c9e;
+}
+
+.bg-bottom {
+  background: #bedcf7;
+}
