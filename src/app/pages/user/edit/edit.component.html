@@ -1,0 +1,52 @@
+<section class="edit-area" [ngClass]="{'show': valueTf}">
+    <div class="user">
+
+        <img src="https://lh3.googleusercontent.com/a-/AOh14GiQzRCYPi8uT_lMZX0FJyC1YS_LfC1D3jIpplRV8A=s96-c"
+            class="img-edit" alt="">
+        <div class="user-letters">
+            <h2 class="userName">Markus Dennys</h2>
+            <h4 class="userEmail">Markus.dennys.vilela@accenture.com</h4>
+        </div>
+    </div>
+    <form class="form-edit">
+        <legend>Dados pessoais</legend>
+        <div class="field-container">
+            <mat-form-field class="input" appearance="fill">
+                <mat-label>Nome</mat-label>
+                <input matInput placeholder="Nome" type="text" name="nome " required>
+                <!-- <mat-error *ngIf="fields.controls.nome.status">Nome é obrigatório</mat-error> -->
+            </mat-form-field>
+            <mat-form-field class="input" appearance="fill">
+                <mat-label>Sobre-nome</mat-label>
+                <input matInput placeholder="SobreNome" type="text" name="SobreNome" required>
+                <!-- <mat-error *ngIf="fields.controls.nome.status">Nome é obrigatório</mat-error> -->
+            </mat-form-field>
+        </div>
+
+        <div class="field-container">
+            <mat-form-field class="input input-big" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" type="email" name="Email" required>
+                <!-- <mat-error *ngIf="fields.controls.nome.status">Nome é obrigatório</mat-error> -->
+            </mat-form-field>
+        </div>
+
+        <div class="field-container">
+            <mat-form-field class="input" appearance="fill">
+                <mat-label>Número</mat-label>
+                <input matInput placeholder="Número" type="text" name="numero" required>
+                <!-- <mat-error *ngIf="fields.controls.nome.status">Nome é obrigatório</mat-error> -->
+            </mat-form-field>
+            <mat-form-field class="input" appearance="fill">
+                <mat-label>Número</mat-label>
+                <input matInput placeholder="Número" type="text" name="numero" required>
+                <!-- <mat-error *ngIf="fields.controls.nome.status">Nome é obrigatório</mat-error> -->
+            </mat-form-field>
+        </div>
+        <div class="buttons">
+            <button mat-raised-button class="button-subm">Enviar</button>
+            <button mat-raised-button class="button-cancel" (click)="close()">Cancelar</button>
+        </div>
+    </form>
+
+</section>

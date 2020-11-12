@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.user-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 190vh;
+  min-height: 1200px;
+}
+
+.user-container .title-user {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: rgb(104, 104, 104);
+  background-color: white;
+  box-shadow: 0 0 3px rgb(37, 37, 37);
+}
+
+.user-container .user-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 55%;
+  width: 100%;
+  position: relative;
+  margin-top: 10px;
+  flex-direction: column;
+  background-color: #084177;
+  border-radius: 10px 10px 0 0;
+  grid-area: user;
+}
+.user-container .user-data .user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  position: relative;
+  text-align: center;
+}
+.user-container .user-data .img {
+  width: 114px;
+  height: 114px;
+  border-radius: 100%;
+  box-shadow: 0 0 7px black;
+}
+.user-container .user-data .userName {
+  color: white;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin: 10px 0 0 0;
+}
+.user-container .user-data .userEmail {
+  color: white;
+  margin: 0;
+}
+.user-container .user-data .button {
+  margin-top: 10px;
+}
+
+.user-container .user-data .data-area {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  background-color: white;
+}
+
+.user-container .user-data .data-area .ul-data {
+  display: flex;
+  flex-direction: column;
+}
+.user-container .user-data .data-area .ul-data li {
+  display: flex;
+  margin: 15px 0 10px 20px;
+}
+
+.user-container .user-data .data-area .ul-data li .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: #084177;
+  color: white;
+  box-shadow: 0 0 3px black;
+}
+
+.user-container .user-data .data-area .ul-data li .data {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.user-container .user-data .data-area .ul-data li .data .title-li {
+  color: rgb(104, 104, 104);
+}
+
+.user-container .b-tickets {
+  grid-area: btic;
+}
+.user-container .s-tickets {
+  grid-area: stic;
+}
+.user-container .tic {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 25%;
+  margin-top: 20px;
+  background-color: white;
+}
+.user-container .tic .tic-title {
+  width: 90%;
+  text-align: left;
+}
+.user-container .tic .tic-title .title-btic {
+  margin: 0;
+}
+.user-container .tic .tics {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  height: 80%;
+  border: 1px dashed grey;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.user-container .tic .tics:hover {
+  box-shadow: 0 0 7px rgb(37, 37, 37);
+  background-color: rgb(235, 235, 235);
+}
+
+.user-container .tic .tics .text-tic {
+  margin: 10px 0;
+}
+.user-container .tic .tics .img-box {
+  width: 80px;
+  padding: 10px;
+  background-color: #084177;
+  border-radius: 100%;
+}
+
+@media (min-width: 800px) {
+  .user-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.5fr 1fr;
+    grid-template-areas:
+      "user user "
+      "btic stic ";
+    width: 100%;
+    max-width: 900px;
+    max-height: 800px;
+    min-height: 600px;
+    height: 100vh;
+    margin: 0 auto;
+    gap: 10px;
+  }
+  .user-container .title-user {
+    display: none;
+  }
+  .user-container .user-data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    margin: 0;
+  }
+  .user-container .user-data .img {
+    width: 84px;
+    height: 84px;
+  }
+  .user-container .user-data .data-area {
+    height: 65%;
+  }
+
+  .user-container .user-data .user {
+    justify-content: flex-start;
+    padding-left: 30px;
+    flex-direction: row;
+    height: 35%;
+    width: 100%;
+  }
+
+  .user-container .user-data .button {
+    position: absolute;
+    right: 30px;
+  }
+
+  .user-container .user-data .user .letters {
+    text-align: left;
+    padding-left: 10px;
+  }
+  .user-container .tic {
+    height: 100%;
+    margin-top: 00px;
+  }
+}

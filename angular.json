@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "mangue-travels"
+  "defaultProject": "mangue-travels",
+  "cli": {
+    "analytics": "37e7a5b9-3caa-4c2f-95bd-ea393ebd817b"
+  }
 }

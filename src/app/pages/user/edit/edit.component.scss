@@ -1,0 +1,88 @@
+.edit-area{
+  display: none;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 10px 10px 0 10px;
+}
+.show {
+  display: block;
+}
+.user {
+  display: flex;
+  align-items: center;
+  height: 20%;
+  background-color: #084177;
+  border-radius: 10px 10px 0 0px;
+}
+.user .img-edit {
+  border-radius: 100%;
+  width: 40px;
+
+  margin-left: 20px;
+}
+.user h2,
+h4 {
+  color: white;
+  margin: 0;
+  padding-left: 10px;
+}
+.user h4 {
+  font-size: 12px;
+}
+.form-edit {
+  display: flex;
+  height: 80%;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.form-edit legend {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.form-edit .field-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+}
+.form-edit .field-container .input {
+  width: 100%;
+  margin: 0px;
+}
+.form-edit .field-container .buttons {
+  display: flex;
+  flex-direction: row;
+}
+.button-subm {
+  color: white;
+  background-color: #165c9e;
+}
+.button-cancel {
+  color: white;
+  background-color: red;
+  margin-left: 20px;
+}
+@media (min-width: 900px) {
+  .form-edit {
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+  .form-edit .field-container {
+    flex-direction: row;
+  }
+  .form-edit .field-container .input {
+    width: 100%;
+    margin: 2px;
+  }
+  .buttons {
+    display: flex;
+  }
+}
