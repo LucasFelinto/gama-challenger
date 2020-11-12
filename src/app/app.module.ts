@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -7,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { UserModule } from './pages/user/user.module';
 
+import {MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
@@ -18,9 +20,11 @@ import { UserModule } from './pages/user/user.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatMenuModule
     UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
