@@ -1,6 +1,6 @@
 
 main {
-    background-image: url('./airplane-mobile.png');
+    background-image: url('./image/airplane-mobile.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 100%;
@@ -29,7 +29,7 @@ main {
         transform: translate(-50%, -50%);
         width: 100%;
         max-width: 240px;
-        max-height: 152px;
+        max-height: 232px;
         background-color: white;
         padding: 12px 12px 32px 12px;
         border-radius: 0 4px 4px 4px;
@@ -41,18 +41,25 @@ main {
             left: 0;
             border-radius: 4px 4px 0 0;
             display: flex;
+            padding: 2px;
+            > input {
+                margin: 4px;
+            }
         }
         > input[type=text], input[type=date] {
             width: 100%;
             margin: 2px 24px 2px 0;
         }
         > button {
-            transform: translateX(100%);
+            position: relative;
+            left: 50%;
+            transform: translateX(-10%);
             background: #3544C5;
             border-radius: 4px;
             width: 119px;
             height: 30px;
             color: white;
+            margin-top: 4px;
         }
     }
 }
@@ -60,12 +67,21 @@ main {
 section {
     width: 100%;
     height: 100%;
-    box-shadow: inset 0 0 1em rgb(117, 117, 117), 0 0 1em rgb(68, 68, 68);
+    > .sub-section {
+        width: 60%;
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 12px;
+        flex-wrap: wrap;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     > div {
         position: relative;
         top: 16px;
         max-width: 235px;
-        height: 33px;
+        height: 40px;
         background-color:#084177;
         border-radius: 0px 25px 25px 0px;
         color: white;
@@ -84,6 +100,7 @@ section {
         border-radius: 5px;
         padding: 0;
         position: relative;
+        margin-top: 12px;
         > .star {
             position: absolute;
             top: 6px;
@@ -131,17 +148,21 @@ section {
             }
         }
 
-        .tooltip {
+        .tooltip-social:hover .social-image {
+            visibility: visible;
+        }
+
+        > .tooltip-social {
             position: absolute;
             top: 6px;
             left: 6px;
             display: inline-block;
             border-bottom: 1px dotted black;
-            .tooltiptext {
+            > .social-image {
+                visibility: hidden;
               top: -28px;
               left: 12px;
               margin-top: 6px;
-              visibility: hidden;
               width: 100%;
               background-color: white;
               color: #fff;
@@ -151,6 +172,7 @@ section {
               display: flex;
               position: relative;
               z-index: 1;
+
               > img {
                 margin: 0 4px 0 4px;
                 cursor: pointer;
@@ -158,25 +180,11 @@ section {
                   margin: 0;
                 }
               }
+
             }
           }
 
-          .tooltip {
-            &:hover .tooltiptext {
-              visibility: visible;
-            }
           
-            .tooltiptext::after {
-              content: " ";
-              position: absolute;
-              top: 50%;
-              right: 100%;
-              margin-top: -5px;
-              border-width: 5px;
-              border-style: solid;
-              border-color: transparent white transparent transparent;
-            }
-        }
     }
 }
 
@@ -187,8 +195,9 @@ footer {
     color: white;
 }
 
+
 @media (min-width: 680px) {
     main {
-        background-image: url('./airplane.jpg');
+        background-image: url('./image/airplane.jpg');
     }
 }

@@ -33,38 +33,32 @@
   <div>
     <h1>Passagens aéreas</h1>
   </div>
-  <br>
-  <br>
-  <br>
-  <div class="passage-card">
-    <img src="airplane-mobile.png" alt=""/> <!-- Img de exemplo -->
-    <div class="tooltip">
-      <svg width="11" height="3" viewBox="0 0 11 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <section class="sub-section">
+    <div class="passage-card" *ngFor="let i of [1,2,3,4,5,6]">
+      <img src="airplane-mobile.png" alt=""/> <!-- Img de exemplo -->
+      
+      <div class="tooltip-social">
+        <svg width="11" height="3" viewBox="0 0 11 3" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="9.5" cy="1.5" r="1.5" fill="white"/>
           <circle cx="5.5" cy="1.5" r="1.5" fill="white"/>
           <circle cx="1.5" cy="1.5" r="1.5" fill="white"/>
-      </svg>
-      <span class="tooltiptext">
-        <img src="https://i1.wp.com/preservationbuffaloniagara.org/wp-content/uploads/2017/08/facebook-icon.png?fit=512%2C512&ssl=1" width="22" height="22"/>
-        <img src="https://i1.wp.com/preservationbuffaloniagara.org/wp-content/uploads/2017/08/facebook-icon.png?fit=512%2C512&ssl=1" width="22" height="22"/>
-        <img src="https://i1.wp.com/preservationbuffaloniagara.org/wp-content/uploads/2017/08/facebook-icon.png?fit=512%2C512&ssl=1" width="22" height="22"/>
-      </span>
+        </svg>
+        <span class="social-image">
+          <img src="https://i1.wp.com/preservationbuffaloniagara.org/wp-content/uploads/2017/08/facebook-icon.png?fit=512%2C512&ssl=1" width="22" height="22"/>
+          <img src="https://i1.wp.com/preservationbuffaloniagara.org/wp-content/uploads/2017/08/facebook-icon.png?fit=512%2C512&ssl=1" width="22" height="22"/>
+          <img src="https://i1.wp.com/preservationbuffaloniagara.org/wp-content/uploads/2017/08/facebook-icon.png?fit=512%2C512&ssl=1" width="22" height="22"/>
+        </span>
+      </div>
+  
+      <svg class="star" xmlns="http://www.w3.org/2000/svg" fill="white" width="24" height="24" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      <div class="passage-description">
+        <h1>Local</h1><br/>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi omnis exercitationem nostrum vitae nam repellat earum cupiditate deleniti nisi fugiat. Laboriosam unde harum quo officiis, deserunt ratione illo ex. Numquam.</p>
+      </div>
+      <button>Buy</button>
     </div>
-    <svg class="star" xmlns="http://www.w3.org/2000/svg" fill="white" width="24" height="24" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-    <div class="passage-description">
-      <h1>Local</h1><br/>
-      <p>Viagem para tal local que vai né fazer e ir para o 
-        i né fazer e ir para oi né fazer e ir para o
-        e ir para oi né fazer e ir para o
-        e ir para oi né fazer e ir para oViagem para tal local que vai né fazer e ir para o 
-        i né fazer e ir para oi né fazer e ir para o
-        e ir para oi né fazer e ir para o
-        e ir para oi né fazer e ir para o</p>
-    </div>
-    <button>Buy</button>
-  </div>
+  </section>
+
 </section>
-<footer>
-  Nome do site
-</footer>
 
