@@ -60,7 +60,7 @@ section {
 }
 
 .form-wrapper {
-  background-image: linear-gradient(to top, white 60% 80%, #6a1b9a 80%);
+  background-image: linear-gradient(to top, white 60% 80%, #311b92 80%);
   height: 100%;
   display: flex; 
   justify-content: center;
@@ -79,4 +79,10 @@ section {
   margin-top: 10px;
 }
 
+// .primary-button {
+//   background-color: #311b92;
+// }
 
+button {
+  background-color: #311b92 !important;
+}
