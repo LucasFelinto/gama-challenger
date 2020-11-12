@@ -1,17 +1,26 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from "@angular/core";
+import { FooterComponent } from '../components/footer/footer.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
 
-import { FooterModule } from '../components/footer/footer.module';
 
 @NgModule({
     declarations:[
-
+        FooterComponent
     ],
     imports: [
         CommonModule,
-        FooterModule
+       
+        MatInputModule,
+        MatFormFieldModule,
+        MatButtonModule
+        
     ],
-   
+   exports:[
+       FooterComponent
+   ]
 })
 
-export class SharedModule{}
+export class SharedModule{ }
