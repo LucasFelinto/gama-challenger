@@ -3,13 +3,13 @@
   <h1 class="title-user">Meu Perfil</h1>
 
   <div class="user-data">
-    <app-edit  [valueTf]="edit" (closeEdit)="closeEditModal()"></app-edit>
+    <app-edit  [valueTf]="user" (closeEdit)="closeEditModal()"></app-edit>
     <div class="user">
-      <img src="https://lh3.googleusercontent.com/a-/AOh14GiQzRCYPi8uT_lMZX0FJyC1YS_LfC1D3jIpplRV8A=s96-c" class="img"
-        alt="">
+      <img [src]="user.userPic" class="img"
+        alt="User-emage">
       <div class="letters">
-        <h2 class="userName">{{userName}} </h2>
-        <h4 class="userEmail"> {{userEmail}} </h4>
+        <h2 class="userName">{{user.userfName}} {{user.usersName}}, {{user.userCountry}} </h2>
+        <h4 class="userEmail"> {{user.userEmail}} </h4>
       </div>
 
       <button mat-raised-button class="button" (click)="openEdit()">Editar</button>
@@ -21,21 +21,23 @@
           <i class="material-icons mdl-list__item-avatar icon">person</i>
           <div class="data">
             <span class="title-li">Dados Pessoais</span>
-            <span class="">{{userName}}</span>
+            <span class="">{{user.userfName}}
+              {{user.usersName}}
+            </span>
           </div>
         </li>
         <li class="li-data">
           <i class="material-icons mdl-list__item-avatar icon">phone</i>
           <div class="data">
             <span class="title-li">Telefone</span>
-            <span class="">{{userNumber}}</span>
+            <span class="">{{user.userNumber}}</span>
           </div>
         </li>
         <li class="li-data">
           <i class="material-icons mdl-list__item-avatar icon">email</i>
           <div class="data">
             <span class="title-li">Email</span>
-            <span class="">{{userEmail}}</span>
+            <span class="">{{user.userEmail}}</span>
           </div>
         </li>
       </ul>

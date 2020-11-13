@@ -6,12 +6,22 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   templateUrl: './edit.component.html',
   styleUrls: ['./edit.component.scss']
 })
-export class EditComponent  {
+export class EditComponent    {
 
   @Input() valueTf;
   @Output() closeEdit = new EventEmitter
 
-  close(){
-    this.closeEdit.emit()
+  openChangePic: boolean = false
+
+
+  saveEdit(){
+    this.closeEdit.emit(
+     
+    )
   }
+  changeValue(){
+    this.openChangePic = !this.openChangePic
+  }
+
+  
 }

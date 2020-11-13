@@ -1,24 +1,33 @@
-<section class="edit-area" [ngClass]="{'show': valueTf}">
+<section class="edit-area" [ngClass]="{'show': valueTf.edit}">
     <div class="user">
-
-        <img src="https://lh3.googleusercontent.com/a-/AOh14GiQzRCYPi8uT_lMZX0FJyC1YS_LfC1D3jIpplRV8A=s96-c"
-            class="img-edit" alt="">
+        <button class="button-pic" (click)="changeValue()">
+           <div class="button-change" [ngClass]="{'close-picChange': openChangePic }"></div>
+        </button>
         <div class="user-letters">
             <h2 class="userName">Markus Dennys</h2>
             <h4 class="userEmail">Markus.dennys.vilela@accenture.com</h4>
         </div>
     </div>
-    <form class="form-edit">
-        <legend>Dados pessoais</legend>
+    <form class="form-edit" #formEdit="ngForm">
+
+        <div class="modal-changePic" [ngClass]="{'showChangePic': openChangePic}">
+
+            <label for="pic"> <img src="https://www.flaticon.com/svg/static/icons/svg/725/725008.svg"
+                    alt="upLoad-image"></label>
+            <input type="file" id="pic" accept="image/png, image/jpeg">
+                <h2>Faça Upload da sua foto </h2>
+        </div>
         <div class="field-container">
             <mat-form-field class="input" appearance="fill">
                 <mat-label>Nome</mat-label>
-                <input matInput placeholder="Nome" type="text" name="nome " required>
+                <input matInput placeholder="Nome" #nome="ngModel" [(ngModel)]="valueTf.userfName" type="text"
+                    name="userfName" required>
                 <!-- <mat-error *ngIf="fields.controls.nome.status">Nome é obrigatório</mat-error> -->
             </mat-form-field>
             <mat-form-field class="input" appearance="fill">
                 <mat-label>Sobre-nome</mat-label>
-                <input matInput placeholder="SobreNome" type="text" name="SobreNome" required>
+                <input matInput placeholder="SobreNome" #sobreNome="ngModel" [(ngModel)]="valueTf.usersName" type="text"
+                    name="usersName" required>
                 <!-- <mat-error *ngIf="fields.controls.nome.status">Nome é obrigatório</mat-error> -->
             </mat-form-field>
         </div>
@@ -26,7 +35,8 @@
         <div class="field-container">
             <mat-form-field class="input input-big" appearance="fill">
                 <mat-label>Email</mat-label>
-                <input matInput placeholder="Email" type="email" name="Email" required>
+                <input matInput placeholder="Email " #email="ngModel" [(ngModel)]="valueTf.userEmail" type="email"
+                    name="userEmail" required>
                 <!-- <mat-error *ngIf="fields.controls.nome.status">Nome é obrigatório</mat-error> -->
             </mat-form-field>
         </div>
@@ -34,19 +44,22 @@
         <div class="field-container">
             <mat-form-field class="input" appearance="fill">
                 <mat-label>Número</mat-label>
-                <input matInput placeholder="Número" type="text" name="numero" required>
+                <input matInput placeholder="Número" #userNumber="ngModel" [(ngModel)]="valueTf.userNumber" type="text"
+                    name="userNumber" required>
                 <!-- <mat-error *ngIf="fields.controls.nome.status">Nome é obrigatório</mat-error> -->
             </mat-form-field>
             <mat-form-field class="input" appearance="fill">
-                <mat-label>Número</mat-label>
-                <input matInput placeholder="Número" type="text" name="numero" required>
+                <mat-label>País</mat-label>
+                <input matInput placeholder="País de origem" #userCountry="ngModel" [(ngModel)]="valueTf.userCountry"
+                    type="text" name="userCountry" type="text" name="País" required>
                 <!-- <mat-error *ngIf="fields.controls.nome.status">Nome é obrigatório</mat-error> -->
             </mat-form-field>
         </div>
         <div class="buttons">
-            <button mat-raised-button class="button-subm">Enviar</button>
-            <button mat-raised-button class="button-cancel" (click)="close()">Cancelar</button>
+            <button mat-raised-button class="button-subm" (click)="saveEdit()">Salvar e fechar</button>
+
         </div>
     </form>
+
 
 </section>
