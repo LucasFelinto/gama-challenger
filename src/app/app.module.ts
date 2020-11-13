@@ -9,6 +9,8 @@ import {SharedModule} from './shared/modules/shared.module'
 import {TicketComponent} from './pages/ticket/ticket.component';
 import {SignUpModule} from './pages/sign-up/sign-up.module'
 import {MatMenuModule} from '@angular/material/menu';
+import { TicketModule } from './pages/ticket/ticket.module';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import {MatMenuModule} from '@angular/material/menu';
     UserModule,
     SharedModule,
     SignUpModule,
-    MatMenuModule
+    MatMenuModule,
+    TicketModule
   ],
   providers: [],
   bootstrap: [AppComponent]
