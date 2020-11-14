@@ -1,194 +1,177 @@
-
 main {
-    background-image: url('./airplane-mobile.png');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    height: 100%;
-    > nav {
-        padding: 12px;
-        background-color:#084177;
-        border-radius: 0 0 25px 25px;
-        position: relative;
-        > button {
-            position: absolute;
-            top: 12px;
-            right: 32px;
-            background: transparent;
-            border: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            color: white;
-            cursor: pointer;
-        }
-    }
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  min-height: 700px;
+  justify-content: center;
 
-    > form {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        max-width: 240px;
-        max-height: 152px;
-        background-color: white;
-        padding: 12px 12px 32px 12px;
-        border-radius: 0 4px 4px 4px;
-        box-shadow:  0 0 1em rgb(117, 117, 117), 0 0 1em rgb(68, 68, 68);
-        > span {
-            position: absolute;
-            background-color: white;
-            top: -20px;
-            left: 0;
-            border-radius: 4px 4px 0 0;
-            display: flex;
-        }
-        > input[type=text], input[type=date] {
-            width: 100%;
-            margin: 2px 24px 2px 0;
-        }
-        > button {
-            transform: translateX(100%);
-            background: #3544C5;
-            border-radius: 4px;
-            width: 119px;
-            height: 30px;
-            color: white;
-        }
+  > form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 95%;
+    max-width: 1000px;
+    height: 95%;
+    max-height: 600px;
+    background-color: #084177;
+    border-radius: 4px;
+    margin-top: 30px;
+  }
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .block-input {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  input {
+    width: 90%;
+    height: 55px;
+    border-radius: 4px;
+    border: none;
+
+    margin: 2px auto;
+  }
+  label {
+    color: rgb(224, 224, 224);
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 100;
+    padding-left: 5px;
+  }
+  .button {
+    margin: 15px auto;
+    border-radius: 4px;
+    border: none;
+    height: 55px;
+    width: 95%;
+    padding: 10px 20px;
+    background-color: rgb(37, 37, 37);
+    color: rgb(224, 224, 224);
+    font-size: 20px;
+  }
+
+  @media (min-width: 900px) {
+    form {
+      width: 95%;
+      max-width: 1000px;
+      height: 100%;
+      background-color: #084177;
+      border-radius: 4px;
+      margin-top: 30px;
+      box-shadow: 0 0 7px rgb(37, 37, 37);
     }
+    .inputs {
+      flex-direction: row;
+    }
+    .title-form {
+      font-size: 32px;
+
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .title-form::before {
+      content: "";
+      width: 80%;
+      height: 2px;
+      background-color: white;
+      position: absolute;
+      bottom: -15px;
+    }
+    .button {
+      width: 25%;
+      padding: 10px 20px;
+      background-color: rgb(37, 37, 37);
+      color: rgb(224, 224, 224);
+      font-size: 20px;
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  main {
+    min-height: 0;
+    height: 45vh;
+    min-height: 250px;
+    margin-bottom: 50px;
+  }
+}
+.title-form {
+  padding-left: 5px;
+  width: 90%;
+  color: rgb(224, 224, 224);
+
+  position: relative;
+  font-size: 24px;
+}
+
+.title-form::before {
+  content: "";
+  width: 80%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  bottom: -7px;
 }
 
 section {
-    width: 100%;
-    height: 100%;
-    box-shadow: inset 0 0 1em rgb(117, 117, 117), 0 0 1em rgb(68, 68, 68);
-    > div {
-        position: relative;
-        top: 16px;
-        max-width: 235px;
-        height: 33px;
-        background-color:#084177;
-        border-radius: 0px 25px 25px 0px;
-        color: white;
-        padding: 6px;
-        overflow: hidden;
-        > h1 {
-            text-transform: uppercase;
-        }
-    }
+  background-color: white;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+flex-wrap: wrap;
+  position: relative;
+}
+.title-tickets {
 
-    > .passage-card {
-        width: 226px;
-        height: 220px;
-        background: #E9E9E9;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 5px;
-        padding: 0;
-        position: relative;
-        > .star {
-            position: absolute;
-            top: 6px;
-            right: 6px;
-        }
-        > img {
-            width: 100%;
-            height: 136px;
-            filter: drop-shadow(0px 1px 0px #C0C4D8);
-            border-radius: 5px 5px 0px 0px;
-            position: relative;
-            z-index: 0;
-        }
-        > button {
-            position: absolute;
-            bottom: 0;
-            left:50%;
-            transform: translateX(-50%);
-            cursor: pointer;
-            background: #3544C5;
-            border-radius: 25px 25px 0px 0px;
-            width: 64px;
-            border: none;
-            color: white;
-        }
-        > .passage-description {
-            width: 100%;
-            height: 64px;
-            border-radius: 0;
-            padding: 0;
-            color: black;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            > h1 {
-                font-size: 1em;
-                margin-top: -10px;
-                margin-bottom: -22px;
-                text-transform: bold;
-            }
-            > p {
-                font-size: .8em;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-        }
+  padding-top: 30px;
 
-        .tooltip {
-            position: absolute;
-            top: 6px;
-            left: 6px;
-            display: inline-block;
-            border-bottom: 1px dotted black;
-            .tooltiptext {
-              top: -28px;
-              left: 12px;
-              margin-top: 6px;
-              visibility: hidden;
-              width: 100%;
-              background-color: white;
-              color: #fff;
-              text-align: center;
-              border-radius: 6px;
-              padding: 5px 0;
-              display: flex;
-              position: relative;
-              z-index: 1;
-              > img {
-                margin: 0 4px 0 4px;
-                cursor: pointer;
-                > &:last-child {
-                  margin: 0;
-                }
-              }
-            }
-          }
-
-          .tooltip {
-            &:hover .tooltiptext {
-              visibility: visible;
-            }
-          
-            .tooltiptext::after {
-              content: " ";
-              position: absolute;
-              top: 50%;
-              right: 100%;
-              margin-top: -5px;
-              border-width: 5px;
-              border-style: solid;
-              border-color: transparent white transparent transparent;
-            }
-        }
-    }
+  padding-left: 20px;
+  font-size: 30px;
+  width: 80%;
+  text-transform: uppercase;
+  color: rgb(37, 37, 37);
 }
 
-footer {
-    padding: 12px;
-    background-color:#084177;
-    text-align: center;
-    color: white;
+.demo-card-wide.mdl-card {
+  width: 90%;
+   max-width: 350px;
+  margin: 0 auto;
 }
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: linear-gradient(90deg, #0841777c, #0841777c), url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Porto_do_Recife_-_Recife_-_Pernambuco_-_Brasil.jpg/1200px-Porto_do_Recife_-_Recife_-_Pernambuco_-_Brasil.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+@media (min-width: 900px) {
+  main {
+    min-height: 0;
+    height: 45vh;
+    min-height: 250px;
+    margin-bottom: 50px;
+  }section {
 
-@media (min-width: 680px) {
-    main {
-        background-image: url('./airplane.jpg');
-    }
+    height: 75%;
+ 
+
+  }
+  .title-tickets{
+    position: absolute;
+    top: 5px;
+    left: 30px;
+  }
 }

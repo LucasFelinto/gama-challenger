@@ -5,6 +5,7 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { TicketComponent } from './pages/ticket/ticket.component';
 import { UserComponent } from './pages/user/user.component';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -29,3 +30,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+

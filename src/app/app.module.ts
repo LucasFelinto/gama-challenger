@@ -4,17 +4,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserModule } from './pages/user/user.module';
-import { HomepageComponent } from './pages/homepage/homepage.component';
+
 import {SharedModule} from './shared/modules/shared.module'
 import {TicketComponent} from './pages/ticket/ticket.component';
 import {SignUpModule} from './pages/sign-up/sign-up.module'
 import {MatMenuModule} from '@angular/material/menu';
+import { RouterModule } from '@angular/router';
+import { HomepageModule } from './pages/homepage/homepage.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent,
-    TicketComponent
+   
+    TicketComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -23,7 +27,9 @@ import {MatMenuModule} from '@angular/material/menu';
     UserModule,
     SharedModule,
     SignUpModule,
-    MatMenuModule
+    MatMenuModule,
+    RouterModule,
+    HomepageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

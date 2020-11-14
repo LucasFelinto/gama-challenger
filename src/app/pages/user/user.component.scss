@@ -3,6 +3,7 @@
   padding: 0;
 }
 .user-container {
+ 
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -88,8 +89,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
   border-radius: 100%;
   background-color: #084177;
   color: white;
@@ -146,7 +148,7 @@
 }
 
 .user-container .tic .tics .text-tic {
-  margin: 10px 0;
+  margin: 5px 0;
 }
 .user-container .tic .tics .img-box {
   width: 80px;
@@ -155,7 +157,27 @@
   border-radius: 100%;
 }
 
-@media (min-width: 800px) {
+
+.demo-card-wide.mdl-card {
+  position: absolute;
+
+  right: -380px;
+  width: 90%;
+   max-width: 350px;
+  margin: 0 auto;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: linear-gradient(90deg, #0841777c, #0841777c), url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Porto_do_Recife_-_Recife_-_Pernambuco_-_Brasil.jpg/1200px-Porto_do_Recife_-_Recife_-_Pernambuco_-_Brasil.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+@media (min-width: 900px) {
   .user-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -166,10 +188,11 @@
     width: 100%;
     max-width: 900px;
     max-height: 800px;
-    min-height: 600px;
-    height: 100vh;
-    margin: 0 auto;
+    min-height: 500px;
+    height: 90vh;
+    margin: 10px 20px;
     gap: 10px;
+    position: relative;
   }
   .user-container .title-user {
     display: none;
@@ -179,7 +202,8 @@
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    margin: 0;
+   
+    border-radius: 10px 10px 0 0;
   }
   .user-container .user-data .img {
     width: 84px;

@@ -1,70 +1,96 @@
-<main>
-  <nav>
-    LOGO
-    <button mat-button [matMenuTriggerFor]="menu">
-      Menu
-    </button>
-    <mat-menu #menu="matMenu">
-      <a mat-menu-item routerLink="/perfil">Perfil</a>
-      <button mat-menu-item>Logout</button>
-    </mat-menu>
-  </nav>
+<main class="main">
 
   <form action="">
-    <span>
-      <input type="radio" id="idaEVolta" name="viagem" value="idaEVolta">
-      <label for="idaEVolta">Ida e volta</label><br>
-      <input type="radio" id="somenteIda" name="viagem" value="somenteIda">
-      <label for="somenteIda">Somente ida</label><br>
-    </span>
-    <input type="text" name="" id="" placeholder="Origem">
-    <input type="text" name="" id="" placeholder="Destino">
-    <label for="dataDePartida">Data de partida:</label>
-    <input id="dataDePartida" for="dataDePartida" type="date" >
-    <label for="dataDeVolta">Data de retorno:</label>
-    <input id="dataDeVolta" type="date" >
-    <button>
-      Buscar
-    </button>
-  </form>
-  <!-- <img src="src\app\pages\homepage\item.png"/> Borda ondulada -->
-</main>
-<section>
-  <div>
-    <h1>Passagens aéreas</h1>
-  </div>
-  <br>
-  <br>
-  <br>
-  <div class="passage-card">
-    <img src="airplane-mobile.png" alt=""/> <!-- Img de exemplo -->
-    <div class="tooltip">
-      <svg width="11" height="3" viewBox="0 0 11 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="9.5" cy="1.5" r="1.5" fill="white"/>
-          <circle cx="5.5" cy="1.5" r="1.5" fill="white"/>
-          <circle cx="1.5" cy="1.5" r="1.5" fill="white"/>
-      </svg>
-      <span class="tooltiptext">
-        <img src="https://i1.wp.com/preservationbuffaloniagara.org/wp-content/uploads/2017/08/facebook-icon.png?fit=512%2C512&ssl=1" width="22" height="22"/>
-        <img src="https://i1.wp.com/preservationbuffaloniagara.org/wp-content/uploads/2017/08/facebook-icon.png?fit=512%2C512&ssl=1" width="22" height="22"/>
-        <img src="https://i1.wp.com/preservationbuffaloniagara.org/wp-content/uploads/2017/08/facebook-icon.png?fit=512%2C512&ssl=1" width="22" height="22"/>
-      </span>
+    <div>
+      <h1 class="title-form">Passagens áereas que cabem no seu bolso</h1>
     </div>
-    <svg class="star" xmlns="http://www.w3.org/2000/svg" fill="white" width="24" height="24" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-    <div class="passage-description">
-      <h1>Local</h1><br/>
-      <p>Viagem para tal local que vai né fazer e ir para o 
-        i né fazer e ir para oi né fazer e ir para o
-        e ir para oi né fazer e ir para o
-        e ir para oi né fazer e ir para oViagem para tal local que vai né fazer e ir para o 
-        i né fazer e ir para oi né fazer e ir para o
-        e ir para oi né fazer e ir para o
-        e ir para oi né fazer e ir para o</p>
-    </div>
-    <button>Buy</button>
-  </div>
-</section>
-<footer>
-  Nome do site
-</footer>
+    <div class="inputs">
+      <div class="block-input">
+        <label for="partida">Partida </label>
+        <input class="input" type="text" name="partida" id="partida" placeholder="Local de partida">
+      </div>
+      <div class="block-input">
+        <label for="dataDeVolta">Destino</label>
+        <input class="input" type="text" name="Destino" id="Destino" placeholder="Local de destino">
+      </div>
+      <div class="block-input">
+        <label for="dataDePartida">Data de partida</label>
+        <input class="input" id="dataDePartida" for="dataDePartida" type="date">
+      </div>
+      <div class="block-input">
+        <label for="dataDeVolta">Data de retorno</label>
+        <input class="input" id="dataDeVolta" type="date">
+      </div>
 
+    </div>
+
+    <button class="button"> Pesquisar</button>
+
+  </form>
+
+
+</main>
+
+<section>
+
+  <div>
+    <h1 class="title-tickets">Algumas ofertas para você </h1>
+  </div>
+
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <h2 class="mdl-card__title-text">Recife</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      Viaje para recife com um acompanhante
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" routerLink="/ticket">
+        Conferir Passagem
+      </a>
+    </div>
+    <div class="mdl-card__menu">
+      <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+        <i class="material-icons">star</i>
+      </button>
+    </div>
+  </div>
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <h2 class="mdl-card__title-text">Recife</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      Viaje para recife com um acompanhante
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" routerLink="/ticket">
+        Conferir Passagem
+      </a>
+    </div>
+    <div class="mdl-card__menu">
+      <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+        <i class="material-icons">star</i>
+      </button>
+    </div>
+  </div>
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <h2 class="mdl-card__title-text">Recife</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      Viaje para recife com um acompanhante
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" routerLink="/ticket">
+        Conferir Passagem
+      </a>
+    </div>
+    <div class="mdl-card__menu">
+      <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+        <i class="material-icons">star</i>
+      </button>
+    </div>
+  </div>
+
+
+</section>
