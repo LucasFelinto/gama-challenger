@@ -15,7 +15,7 @@
 .user {
   display: flex;
   align-items: center;
-  height: 20%;
+  height: 18%;
   background-color: #084177;
   border-radius: 10px 10px 0 0px;
 }
@@ -71,6 +71,7 @@ h4 {
   flex-direction: column;
   justify-content: center;
   position: relative;
+  padding-top: 10px;
 }
 .form-edit .field-container {
   display: flex;
@@ -78,10 +79,11 @@ h4 {
   width: 80%;
   align-items: center;
   justify-content: center;
+  
 }
 .form-edit .field-container .input {
   width: 100%;
-  margin: 0px;
+  margin-top: 10px;
   animation: movingUp 500ms;
 }
 .form-edit .field-container .buttons {
@@ -91,13 +93,8 @@ h4 {
 .button-subm {
   color: white;
   background-color: #165c9e;
-  margin-bottom: 20px;
-}
-.button-cancel {
-  color: white;
-  background-color: red;
-  margin-left: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  margin-top: -15px;
 }
 
 .modal-changePic {
@@ -134,6 +131,7 @@ h4 {
   }
   .form-edit .field-container {
     flex-direction: row;
+
   }
   .form-edit .field-container .input {
     width: 100%;

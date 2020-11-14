@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent  {
+headerOpen: boolean = false
 
+openHeader(){
+  this.headerOpen = !this.headerOpen
+}
 }

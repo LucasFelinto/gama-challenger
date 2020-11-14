@@ -159,11 +159,11 @@
 
 
 .demo-card-wide.mdl-card {
+  display: none;
   position: absolute;
-
-  right: -380px;
   width: 90%;
-   max-width: 350px;
+  right: -310px;
+   max-width: 300px;
   margin: 0 auto;
 }
 .demo-card-wide > .mdl-card__title {
@@ -233,5 +233,11 @@
   .user-container .tic {
     height: 100%;
     margin-top: 00px;
+  }
+  
+}
+@media(min-width:1200px){
+  .demo-card-wide.mdl-card {
+    display: block;
   }
 }

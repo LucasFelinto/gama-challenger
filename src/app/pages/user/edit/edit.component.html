@@ -35,7 +35,7 @@
         <div class="field-container">
             <mat-form-field class="input input-big" appearance="fill">
                 <mat-label>Email</mat-label>
-                <input matInput placeholder="Email"  type="email"
+                <input matInput placeholder="Email"  #userEmail="ngModel" [(ngModel)]="valueTf.userEmail" type="email"
                     name="userEmail" required>
                 <!-- <mat-error *ngIf="fields.controls.nome.status">Nome é obrigatório</mat-error> -->
             </mat-form-field>

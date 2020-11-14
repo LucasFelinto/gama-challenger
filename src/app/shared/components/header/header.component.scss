@@ -24,8 +24,8 @@ header .logoName {
   border-radius: 8px;
   text-decoration: none;
 }
-header nav {
-  display: none;
+ .nav {
+  display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -35,46 +35,57 @@ header nav {
   top: 0;
   left: 0;
   z-index: 1000;
+  transform: translateX(-100%);
+  transition: 0.3s;
+}
+.show-nav{
+  transform: translateX(0);
 }
 
-header nav .ul-header {
+
+header .nav .ul-header {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-header nav .ul-header li {
+header .nav .ul-header li {
   padding: 20px 0px;
 }
 header .menu-mobile {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   width: 30px;
   height: 30px;
+  z-index: 1000;
+ 
 }
-header .menu-mobile .hamburguer {
+ .hamburguer, .hamburguer2 {
   width: 20px;
   height: 2px;
   background-color: black;
-  position: relative;
-}
-header .menu-mobile .hamburguer::after {
-  content: "";
-  width: 20px;
-  height: 2px;
-  position: absolute;
-  top: 5px;
-  background-color: black;
+  transition: 0.3s;
+  margin: 2px 0;
 }
 
+ .close-right{
+  transform: rotate(45deg);
+ 
+}
+.close-left{
+  transform: rotate(-45deg);
+ margin-top: -4px;
+}
 @media (min-width: 900px) {
-  header nav {
+  header .nav {
     position: relative;
     display: flex;
     width: auto;
+    transform: translateX(0);
   }
-  header nav .ul-header {
+  header .nav .ul-header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,9 +93,11 @@ header .menu-mobile .hamburguer::after {
   }
   header .menu-mobile {
     display: none;
+   
   }
-  header nav .ul-header li {
+  header .nav .ul-header li {
     padding: 00px 20px;
     border-left: 1px solid grey;
   }
+ 
 }
