@@ -13,7 +13,7 @@ export class TicketService {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         Authorization:
-          'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJjb3Ntb250ZWlyb0BnbWFpbC5jb20iLCJzY29wZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2MDUyOTYzNjAsImV4cCI6MTYwNTI5OTk2MH0.STigeIbuYd5pAmUK4eWC-99bnsMzfWPOzEjcqJy_HOU',
+          'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJjb3Ntb250ZWlyb0BnbWFpbC5jb20iLCJzY29wZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2MDUzMDEwNzcsImV4cCI6MTYwNTMwNDY3N30.GRGgyArSWCDmAjYKl569xXRjHzXzv468NNdGZ8WOq78',
       }),
     });
   }
