@@ -8,22 +8,23 @@ import { Component } from '@angular/core';
 })
 export class UserComponent   {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  user= {
+    userPic: "https://www.flaticon.com/svg/static/icons/svg/149/149071.svg",
+    userfName: "Markus",
+    usersName:"Dennys",
+    userEmail:  "markus.dennys.vilela@accenture.com",
+    userNumber: "(81) 9 8728-1088",
+    userCountry: "Brazil",
+    edit: false
   }
 
-  edit: boolean = false
 
-  userName: string = "Markus Dennys"
-  userEmail: string = "markus.dennys.vilela@accenture.com"
-  userNumber: string = "(81) 9 8728-1088"
 
     openEdit(){
-      this.edit = !this.edit
-  
+      this.user.edit = !this.user.edit
+      
     }
     closeEditModal(){
-      this.edit = !this.edit
+      this.user.edit = !this.user.edit
     }
 }

@@ -4,22 +4,25 @@ import { FooterComponent } from '../components/footer/footer.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
-
+import { HeaderComponent } from '../components/header/header.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
     declarations:[
-        FooterComponent
+        FooterComponent,
+        HeaderComponent
     ],
     imports: [
         CommonModule,
-       
         MatInputModule,
         MatFormFieldModule,
-        MatButtonModule
-        
+        MatButtonModule,
+        RouterModule
+
     ],
    exports:[
-       FooterComponent
+       FooterComponent,
+       HeaderComponent
    ]
 })
 

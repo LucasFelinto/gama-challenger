@@ -4,20 +4,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserModule } from './pages/user/user.module';
-import { HomepageComponent } from './pages/homepage/homepage.component';
-import {SharedModule} from './shared/modules/shared.module'
-import {TicketComponent} from './pages/ticket/ticket.component';
-import {SignUpModule} from './pages/sign-up/sign-up.module'
-import {MatMenuModule} from '@angular/material/menu';
-import { TicketModule } from './pages/ticket/ticket.module';
 
+import { SharedModule } from './shared/modules/shared.module';
+import { TicketComponent } from './pages/ticket/ticket.component';
+import { SignUpModule } from './pages/sign-up/sign-up.module';
+import { MatMenuModule } from '@angular/material/menu';
+import { TicketModule } from './pages/ticket/ticket.module';
+import { RouterModule } from '@angular/router';
+import { HomepageModule } from './pages/homepage/homepage.module';
+import { ContatoComponent } from './pages/contato/contato.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomepageComponent,
-    TicketComponent
-  ],
+  declarations: [AppComponent, TicketComponent, ContatoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -26,10 +24,11 @@ import { TicketModule } from './pages/ticket/ticket.module';
     SharedModule,
     SignUpModule,
     MatMenuModule,
-    TicketModule
+    TicketModule,
+    RouterModule,
+    HomepageModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
-
+export class AppModule {}

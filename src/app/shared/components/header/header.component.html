@@ -1,0 +1,21 @@
+<header>
+
+    <div class="logo-area">
+
+       <a class="logoName" routerLink="/">Mangue Travels</a>
+    </div>
+
+    <nav class="nav" [ngClass]="{'show-nav': headerOpen}">
+        <ul class="ul-header">
+            <li><a routerLink="/favoritos" (click)="openHeader()">Favoritos</a></li>
+            <li><a routerLink="/perfil" (click)="openHeader()">Perfil</a></li>
+            <li><a routerLink="/contato" (click)="openHeader()">Fale Conosco</a></li>
+            <li><a routerLink="/cadastro" (click)="openHeader()">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="menu-mobile" (click)="openHeader()">
+        <div class="hamburguer" [ngClass]="{'close-right': headerOpen}"></div>
+        <div class="hamburguer2" [ngClass]="{'close-left': headerOpen}"></div>
+    </div>
+</header>
