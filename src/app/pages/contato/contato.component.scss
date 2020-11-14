@@ -1,0 +1,25 @@
+.contact {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 12px 0;
+    section {
+        border: 1px solid  #084177;
+        text-align: center;
+        img {
+            width: 100%;
+            border-bottom: 1px solid black;
+            height: auto;
+        }
+        h3 {
+            text-transform: uppercase;
+            border-bottom: 1px solid black;
+            margin: 0;
+            color: white;
+            background: #084177;
+        }
+        p {
+            margin: 0 12px;
+            border-bottom: 1px solid black;
+        }
+    }
+}

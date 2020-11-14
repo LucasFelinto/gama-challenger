@@ -11,6 +11,7 @@ import {SignUpModule} from './pages/sign-up/sign-up.module'
 import {MatMenuModule} from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
 import { HomepageModule } from './pages/homepage/homepage.module';
+import { ContatoComponent } from './pages/contato/contato.component';
 
 
 @NgModule({
@@ -18,6 +19,8 @@ import { HomepageModule } from './pages/homepage/homepage.module';
     AppComponent,
    
     TicketComponent,
+   
+    ContatoComponent,
 
   ],
   imports: [

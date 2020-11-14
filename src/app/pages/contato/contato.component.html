@@ -1,0 +1,8 @@
+<main class="contact">
+    <section *ngFor="let eachContact of contacts">
+        <img src={{eachContact.img}} alt={{eachContact.name}}/>
+        <h3>{{eachContact.name}}</h3>
+        <p>{{eachContact.email}}</p>
+        <a href={{eachContact.github}}>Github</a>
+    </section>
+</main>
