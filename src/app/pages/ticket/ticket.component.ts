@@ -15,7 +15,7 @@ export class TicketComponent implements OnInit {
   constructor(private ticketService: TicketService) {}
 
   tickets;
-
+  
   ngOnInit(): void {
     this.getTicket();
   }

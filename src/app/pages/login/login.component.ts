@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../auth.service';
 
 interface User {
-  usuario: string;
-  senha: string;
+  login: string;
+  token: string;
+  userId: string;
 }
 
 @Component({
@@ -12,13 +13,9 @@ interface User {
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  static authenticationUser: any;
-
   constructor(private authService: AuthService) {}
 
   ngOnInit(): void {}
-
-  method() {}
 
   theLogin(nome, senha) {
     this.authService
@@ -28,7 +25,7 @@ export class LoginComponent implements OnInit {
       })
       .subscribe(
         (res) => {
-          LoginComponent.authenticationUser = res;
+          localStorage.setItem('myTokenUser', res.token);
         },
         (err) => console.log(err)
       );
