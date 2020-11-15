@@ -12,6 +12,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
 import { HomepageModule } from './pages/homepage/homepage.module';
 import { ContatoComponent } from './pages/contato/contato.component';
+import { LoginComponent } from './pages/login/login.component';
+import { AuthService } from './pages/login/auth.service';
 
 
 @NgModule({
@@ -21,6 +23,8 @@ import { ContatoComponent } from './pages/contato/contato.component';
     TicketComponent,
    
     ContatoComponent,
+   
+    LoginComponent,
 
   ],
   imports: [
@@ -34,7 +38,7 @@ import { ContatoComponent } from './pages/contato/contato.component';
     RouterModule,
     HomepageModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
