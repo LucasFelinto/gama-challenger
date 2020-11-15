@@ -1,4 +1,4 @@
-<div class="container mt-5 mb-5" *ngFor="let ticket of tickets">
+<div class="container mt-5 mb-5" *ngFor="let ticket of tickets; let i = index">
   <div class="d-flex justify-content-center row">
     <div class="col-md-6">
       <div class="card border-0">
@@ -11,7 +11,7 @@
               </div>
               <div class="d-flex flex-column time">
                 <h1>Duração</h1><br>
-                <p>TEMPO de voo</p>
+                <p>{{ticket.flightGet.data.flightOffers.itineraries.segments.duration}}</p>
               </div>
               <div class="d-flex flex-column justify-content-center"><i class="fa fa-plane fa-3x"></i></div>
               <div class="d-flex flex-column justify-content-between align-items-center">
@@ -39,11 +39,9 @@
               </div>
               <div class="d-flex flex-row-reverse">
                 <div class="p-2">
-
-                  <button type="button" class="btn btn-light">Compra</button>
+                  <p>  R$: {{ticket.price}}</p>
                 </div>
                 <div class="p-2">
-                  <p>preço</p>
                 </div>
               </div>
             </div>
