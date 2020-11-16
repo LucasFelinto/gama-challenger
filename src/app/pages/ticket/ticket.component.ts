@@ -31,7 +31,7 @@ export class TicketComponent implements OnInit {
       this.tickets = result;
       this.flightInfo = result.flightGet.data.flightOffers[0];
       this.itinerarie = this.flightInfo.itineraries[0];
-      this.segment = this.itinerarie.segments[0];
+      this.segment = this.itinerarie.segments;
       console.log(this.tickets);
     });
     // this.ticketService.getTicket().subscribe(

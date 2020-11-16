@@ -25,15 +25,15 @@ export class TicketService {
         }),
       })
       .pipe(
-        map((response) => {
+        map((response: any) => {
           let obj;
           console.log(response);
-          // obj = response.map((ticket) => {
-          //   const newObject = { ...ticket };
-          //   newObject.flightGet = JSON.parse(ticket.flightGet);
-          //   return newObject;
-          //});
-          return obj;
+          obj = response.map((ticket) => {
+            const newObject = { ...ticket };
+            newObject.flightGet = JSON.parse(ticket.flightGet);
+            return newObject;
+          });
+          return obj[0];
         })
       );
   }
