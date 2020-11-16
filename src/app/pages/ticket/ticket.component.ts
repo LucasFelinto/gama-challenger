@@ -16,7 +16,11 @@ export class TicketComponent implements OnInit {
 
   tickets;
 
+  traveler;
+
   flightInfo;
+
+  contact;
 
   segment;
 
