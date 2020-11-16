@@ -13,6 +13,8 @@ import { TicketModule } from './pages/ticket/ticket.module';
 import { RouterModule } from '@angular/router';
 import { HomepageModule } from './pages/homepage/homepage.module';
 import { ContatoComponent } from './pages/contato/contato.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptor } from './token.interceptor';
 
 @NgModule({
   declarations: [AppComponent, TicketComponent, ContatoComponent],
@@ -28,7 +30,9 @@ import { ContatoComponent } from './pages/contato/contato.component';
     RouterModule,
     HomepageModule,
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

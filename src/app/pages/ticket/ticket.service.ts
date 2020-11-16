@@ -32,7 +32,7 @@ export class TicketService {
           //   const newObject = { ...ticket };
           //   newObject.flightGet = JSON.parse(ticket.flightGet);
           //   return newObject;
-          // });
+          //});
           return obj;
         })
       );

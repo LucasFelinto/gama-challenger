@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <div class="container mt-5 mb-5" >
+=======
+<div class="container mt-5 mb-5" *ngFor="let ticket of tickets; let i = index">
+>>>>>>> 3c72b4105678a920659ed7e2ba09cdb21e785314
   <div class="d-flex justify-content-center row">
     <div class="col-md-6">
       <div class="card border-0">
@@ -50,11 +54,17 @@
               </div>
               <div class="d-flex flex-row-reverse">
                 <div class="p-2">
+<<<<<<< HEAD
 
                   <button type="button" class="btn btn-light">Hey</button>
                 </div>
                 <div class="p-2">
                   <p>{{tickets?.price}}</p>
+=======
+                  <p>  R$: {{ticket.price}}</p>
+                </div>
+                <div class="p-2">
+>>>>>>> 3c72b4105678a920659ed7e2ba09cdb21e785314
                 </div>
               </div>
             </div>
