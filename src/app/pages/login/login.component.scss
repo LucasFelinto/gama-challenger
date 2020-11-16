@@ -1,30 +1,93 @@
-main {
+.main-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  min-height: 500px;
+}
+
+.main-login .image-area {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 100%;
+}
+.main-login .image-area .image {
+  width: 80%;
+  height: 90%;
+  background-color: #084177;
+  box-shadow: 0 0 3px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  animation: movingRight 700ms;
+}
+.img-airplane {
+  width: 90%;
+}
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  height: 100%;
+}
+.title-login {
+  font-size: max(30px, 2vw);
+}
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 3px black;
+  animation: movingUp 700ms;
+}
+.link {
+  margin-bottom: 5px;
+}
+
+.button {
+  background-color: #084177;
+  color: white;
+  height: 50px;
+}
+@media (min-width: 900px) {
+  .main-login .image-area {
     display: flex;
-    justify-content: center;
-    .login {
-        display: flex;
-        flex-direction: column;
-        margin: 50px 0;
-        border: 1px solid black;
-        background-color: white;
-        padding: 25px;
-        box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-        input {
-            background-color: rgba(0,0,0,.04);
-            border-radius: 4px 4px 0 0;
-            padding: .75em;
-            border: 0;
-            border-bottom: 1px;
-            margin-bottom: 12px;
-            max-width: 520px;
-        }
-        button {
-            background-color: #084177;
-            max-width: 350px;
-            border: 0;
-            border-radius: 5px;
-            padding: 6px;
-            color: white;
-        }
-    }
+  }
+  .login {
+    width: 30%;
+    height: 100%;
+  }
+  .form {
+    width: 80%;
+  }
+}
+
+@keyframes movingUp {
+  from {
+    margin-top: 50px;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+@keyframes movingRight {
+  from {
+    margin-right: 50px;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+  }
 }

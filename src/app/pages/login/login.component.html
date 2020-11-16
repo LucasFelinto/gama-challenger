@@ -1,7 +1,25 @@
-<main>
-<section class="login">
-    <input #nome name="nome"type="text" placeholder="Name" required>
-    <input #senha name="senha"type="text" placeholder="Password"required>
-    <button (click)="theLogin(nome.value, senha.value)">Login</button>
-</section>
+<main class="main-login">
+    <div class="image-area">
+        <div class="image">
+            <img src="../../../assets/airplane.png" class="img-airplane" alt="airplane image">
+        </div>
+    </div>
+    <section class="login">
+        <form class="form" >
+            <h1 class="title-login">
+                Entrar
+            </h1>
+       
+            <mat-form-field appearance="fill" class="input">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" #nome name="nome" type="email" required>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label> senha</mat-label>
+                <input matInput placeholder="Senha" #nome name="password" type="password" required>
+            </mat-form-field>
+            <a class="link" routerLink="/cadastro">Ainda não cadastrado ? Cadastre-se</a>
+        <button mat-raised-button color="primary" class="button" (click)="theLogin(nome.value, senha.value)">Enviar</button>
+    </form>
+    </section>
 </main>
